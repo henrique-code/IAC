@@ -1,14 +1,13 @@
-name: Deploy S3 Static Site
+name: Create S3 Static Site
 
 on:
   issues:
-    types:
-      - opened
+    type:
+      -opened
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    if: startsWith(github.event.issue.title, 'front')
 
     steps:
       - name: Checkout Repository
